@@ -1,0 +1,139 @@
+.arrow_extend_all_category_header {
+}
+
+.menu_all_category_none {
+  display: none;
+}
+
+.menu_all_category {
+  display: block !important;
+  position: absolute;
+  top: 32;
+  animation-name: showMenuAllCategory;
+  animation-duration: 1s;
+  width: 1440px;
+  height: '100%';
+  border-radius: 4px;
+  padding: 8;
+  z-index: 999;
+  background-color: white;
+}
+
+@keyframes showMenuAllCategory {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.cart-header {
+  position: relative;
+}
+.cart-header-hover {
+  display: none;
+  top: 90;
+  right: 100;
+  position: absolute;
+  width: 300px;
+  height: '100%';
+  padding: 16px;
+  background-color: white;
+  border-radius: 2px;
+  z-index: 9999;
+}
+
+.cart-header:hover ~ .cart-header-hover {
+  display: block;
+  animation-name: showcart;
+  animation-duration: 0.1s;
+}
+
+.cart-header-hover:hover {
+  display: block;
+}
+
+@keyframes showcart {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.react-chat-viewerBox {
+  border-radius: 10px;
+}
+
+.react-chat-textarea {
+  border: 1px solid gray !important;
+  border-radius: 4px !important;
+  padding: 0px 8px !important;
+}
+
+.notification-header-hover {
+  display: none;
+  top: 90;
+  right: 130;
+  position: absolute;
+  width: 250px;
+  height: '100%';
+  background-color: white;
+  border-radius: 2px;
+  z-index: 9999;
+  border: '1px solid #F5F4F3';
+}
+
+.notification-header:hover ~ .notification-header-hover {
+  display: block;
+  animation-name: shownotification;
+  animation-duration: 0.1s;
+}
+
+.notification-header-hover:hover {
+  display: block;
+}
+@keyframes shownotification {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.multi-language-select {
+  width: 100;
+  height: 40;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.box-multi-language-hover {
+  display: none;
+  position: absolute;
+  width: 100px;
+
+  background-color: white;
+  border-radius: 6px;
+  top: 20;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.multi-language-select:hover ~ .box-multi-language-hover {
+  display: block;
+}
+.box-multi-language-hover:hover {
+  display: block;
+  cursor: pointer;
+}
+/* .content_search {
+  display: none;
+}
+.wp_search:hover .content_search {
+  display: 'block !important';
+} */

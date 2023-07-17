@@ -1,0 +1,484 @@
+/*============================================
+
+                05 -- Hero
+  
+=============================================*/
+
+/*-- Hero - 01 --*/
+
+.hero-01 {
+  height: 900px;
+  display: flex !important;
+  align-items: center;
+  background-size: cover;
+
+  @media #{$xl-layout} {
+    height: 800px;
+  }
+
+  @media #{$lg-layout} {
+    height: 600px;
+  }
+
+  @media #{$md-layout} {
+    height: 550px;
+  }
+
+  @media #{$xs-layout} {
+    height: 550px;
+  }
+
+  .hero-content-wrap {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+
+    .hero-01-text {
+      z-index: 99;
+
+      h1 {
+        font-weight: 800;
+        font-size: 92px;
+        font-family: $montserrat;
+        color: $gray-100;
+        @media #{$sm-layout}{
+          font-size: 72px;
+        }
+        @media #{$layout-575}{
+          font-size: 52px;
+        }
+        @media #{$layout-479}{
+          font-size: 42px;
+        }
+      }
+
+      h5 {
+        position: relative;
+        font-weight: 500;
+        color: $gray-100;
+        font-family: $montserrat;
+      }
+
+      @media #{$md-layout} {
+        padding-top: 90px;
+      }
+
+      @media #{$xs-layout} {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        margin-left: 0px;
+        flex-direction: column;
+
+        p {
+          display: none;
+        }
+      }
+    }
+
+
+    .inner-images {
+      text-align: center;
+      position: absolute;
+      right: 0px;
+
+      @media #{$lg-layout} {
+        width: 400px;
+      }
+
+      @media #{$md-layout} {
+        width: 400px;
+        right: 0;
+      }
+
+      @media #{$xs-layout} {
+        width: 300px;
+        right: 50px;
+        bottom: -80px;
+      }
+
+      @media #{$layout-575} {
+        width: 300px;
+        right: 0px;
+        bottom: -100px;
+      }
+    }
+  }
+}
+
+.hero-01-slider {
+  .slick-dots {
+    position: absolute;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media #{$lg-layout} {
+      right: 50px;
+    }
+
+    @media #{$md-layout} {
+      right: 20px;
+    }
+
+    @media #{$xs-layout} {
+      right: 15px;
+    }
+
+    li {
+      margin: 10px 0;
+      font-size: 18px;
+      color: #666;
+
+      .pager__item {
+        background: transparent;
+        border: none;
+        position: relative;
+
+        &::after {
+          right: 0;
+          bottom: 0;
+          content: "";
+          height: 2px;
+          width: 40px;
+          background: #666;
+          position: absolute;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+
+      &.slick-active {
+        color: $black;
+
+        .pager__item {
+          &::after {
+            width: 60px;
+            background: $black;
+          }
+        }
+      }
+
+    }
+
+  }
+}
+.slick-current {
+  .hero-01-text {
+    h6 {
+      animation-name: fadeInLeft;
+      animation-duration: 0.4s;
+    }
+
+    h1 {
+      animation-name: fadeInLeft;
+      animation-duration: 0.7s;
+    }
+
+    a {
+      animation-name: fadeInLeft;
+      animation-duration: 0.9s;
+    }
+  }
+
+  .inner-images {
+    .image-one {
+      animation-name: fadeInRight;
+      animation-duration: 0.9s;
+    }
+  }
+
+}
+
+/*-- Hero - 02 --*/
+
+.hero-02 {
+  height: 100vh;
+  padding-top: 0;
+
+  @media #{$xl-layout} {
+    height: 700px
+  }
+
+  @media #{$lg-layout} {
+    height: 500px
+  }
+
+  @media #{$md-layout} {
+    height: 450px
+  }
+
+  @media #{$xs-layout} {
+    height: 500px
+  }
+
+  .hero-02-content {
+
+    .title {
+      font-size: 72px;
+      line-height: 72px;
+      font-weight: 400;
+      font-family: $montserrat;
+      color: #fff;
+      margin-top: 10px;
+
+      @media #{$xs-layout} {
+        font-size: 30px
+      }
+
+      @media #{$sm-layout} {
+        font-size: 48px
+      }
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 400;
+      color: #fff;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+
+      @media #{$xs-layout} {
+        font-size: 12px;
+        letter-spacing: 2px
+      }
+
+    }
+
+    .play {
+      display: inline-block;
+      width: 66px;
+      height: 66px;
+      line-height: 66px;
+      font-size: 34px;
+      color: $gray-600;
+      background-color: #fff;
+      text-align: center;
+      border-radius: 50%;
+      margin-top: 50px
+    }
+  }
+}
+
+/*-- Hero - 03 --*/
+.hero-03-slider {
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    z-index: 3;
+    cursor: pointer;
+    font-size: 30px;
+
+    &.arrow-next {
+      right: 15px;
+      left: auto;
+    }
+
+    &:hover {
+      color: $black;
+
+      &:before {
+        background-color: $black;
+      }
+    }
+  }
+  .single-hero-03-slider {
+    height: 1100px;
+    display: flex !important;
+    align-items: center;
+    background-size: cover;
+  
+    @media #{$xl-layout} {
+      height: 900px;
+    }
+  
+    @media #{$lg-layout} {
+      height: 850px;
+    }
+  
+    @media #{$md-layout} {
+      height: 700px;
+    }
+  
+    @media #{$xs-layout} {
+      height: 500px;
+    }
+  
+    .hero-content-wrap {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      margin-top: -256px;
+  
+      @media #{$lg-layout} {
+        margin-top: -156px;
+      }
+  
+      @media #{$md-layout} {
+        margin-top: -156px;
+      }
+  
+      @media #{$xs-layout} {
+        margin-top: 0;
+      }
+  
+      .hero-03-text {
+        z-index: 99;
+      }
+    }
+  
+    .small-title {
+      position: relative;
+      padding-left: 25px;
+      color: rgb(153, 153, 153);
+      font-size: 16px;
+      font-weight: 400;
+  
+      &::after {
+        background-color: rgb(153, 153, 153);
+        position: absolute;
+        content: '';
+        width: 2px;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+      }
+    }
+  
+    .hero-title {
+      position: absolute;
+      padding-bottom: 15px;
+    }
+  
+    .inner-images {
+      text-align: center;
+      position: absolute;
+      right: 0;
+  
+      .image-two {
+        position: absolute;
+        bottom: -84px;
+        right: 0;
+  
+        @media #{$xs-layout} {
+          width: 200px;
+          bottom: -4px;
+        }
+      }
+  
+      @media #{$lg-layout} {
+        width: 400px;
+      }
+  
+      @media #{$md-layout} {
+        width: 400px;
+      }
+  
+      @media #{$xs-layout} {
+        width: 300px;
+      }
+    }
+  }  
+}
+
+.slick-current {
+  .hero-03-text {
+    margin-top: 50px;
+
+    h6 {
+      animation-name: slideInLeft;
+      animation-duration: 0.4s;
+    }
+
+    h1 {
+      animation-name: flipInX;
+      animation-duration: 0.6s;
+    }
+
+    a {
+      animation-name: flipInX;
+      animation-duration: 0.9s;
+    }
+  }
+
+  .inner-images {
+    .image-one {
+      animation-name: fadeInTopRight;
+      animation-duration: 0.6s;
+    }
+
+    .image-two {
+      animation-name: fadeInBottomRight;
+      animation-duration: 0.6s;
+    }
+  }
+
+}
+
+/*-- Hero - 04 --*/
+
+.hero-4 {
+  height: 100vh;
+
+  .hero-4-banner-content {
+
+    @media #{$lg-layout} {
+      text-align: center;
+
+    }
+
+    @media #{$md-layout} {
+      text-align: center;
+
+    }
+
+    @media #{$xs-layout} {
+      text-align: center;
+
+    }
+
+    .heading {
+      display: inline-block;
+
+      .title {
+        text-shadow: 0 0 38px rgba(41, 44, 58, 0.09);
+        font-size: 250px;
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: -15px;
+        text-align: center;
+        line-height: 1;
+
+        @media #{$xl-layout} {
+          font-size: 160px;
+
+        }
+
+        @media #{$lg-layout} {
+          font-size: 150px;
+          letter-spacing: -5px;
+
+        }
+
+        @media #{$md-layout} {
+          font-size: 140px;
+          letter-spacing: 0;
+
+        }
+
+        @media #{$xs-layout} {
+          font-size: 70px;
+          letter-spacing: 0;
+
+        }
+
+        @media #{$sm-layout} {
+          font-size: 100px;
+
+        }
+      }
+    }
+  }
+}

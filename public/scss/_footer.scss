@@ -1,0 +1,176 @@
+/*============================================
+
+                26 -- footer
+  
+=============================================*/
+
+.footer-top{
+    .footer-widget {
+        & .footer-logo{
+            margin-bottom: 30px;
+            & a{
+                display: block;
+                & img{
+                    width: 107px;
+                }
+            }
+        }
+        // Title
+        & .title {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 600;
+            white-space: nowrap;
+            text-transform: capitalize;
+            margin-bottom: 30px;
+            // Responsive
+            @media #{$md-layout}{
+                margin-bottom: 15px;
+            }
+            @media #{$xs-layout}{
+                margin-bottom: 15px;
+            }
+        }
+        & p {
+            font-size: 14px;
+            line-height: 23px;
+            margin-bottom: 0;
+            // Responsive
+            @media #{$lg-layout}{
+                font-size: 12px;
+            }
+        }
+        & .opeaning-title{
+            font-size: 14px;
+            line-height: 17px;
+            font-weight: 500;
+            margin-top: 50px;
+            margin-bottom: 0;
+        }
+        & ul.address {
+            & li {
+                display: flex;
+                font-size: 14px;
+                line-height: 22px;
+                margin-bottom: 12px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                
+                & i {
+                    margin-right: 15px;
+                    line-height: 28px;
+                    font-size: 18px;
+                }
+                & span {
+                    overflow: hidden;
+                }
+                & a {
+                    display: block;
+                    &:hover {
+                        color: $theme-color-1;
+                    }
+                }
+            }
+        }
+        & > .ft-menu{
+            display: inline-block;
+            & > li{
+                font-size: 14px;
+                line-height: 23px;
+                margin-bottom: 13px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                & > a{
+                    text-transform: capitalize;
+                    text-decoration: none;
+                    display: inherit;
+                    transition: all 0.4s ease-out;
+                    &:hover{
+                        color: $theme-color-1;
+                    }
+                }
+            }
+        }
+    }
+    
+    /*-- Footer Social --*/
+    .f-social-title{
+        margin-top: 30px;
+        & h3{
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+    }
+    .footer-social {
+        display: flex;
+        & a {
+            margin-right: 25px;
+            display: block;
+            &:last-child {
+                margin-right: 0;
+            }
+            &:hover {
+                color: $theme-color-1;
+            }
+            & i {
+                display: block;
+                font-size: 20px;
+                line-height: 28px;
+            }
+        }
+    }
+    
+    
+}
+.footer-bottom{
+    .copyright {
+        // Responsive
+        @media #{$xs-layout}{
+            text-align: center !important;
+        }
+        & p {
+            line-height: 30px;
+            font-size: 13px;
+            // Responsive
+            @media #{$layout-575}{
+                font-size: 12px;
+            }
+            & a {
+                color: $theme-color-1;
+                &:hover {
+                    color: $theme-color-1;
+                }
+            }
+        }
+    }
+    .footer-nav{
+        // Responsive
+        @media #{$xs-layout}{
+            text-align: center !important;
+        }
+        & ul{
+            & li{
+                display: inline-block;
+                margin: 0 40px 0 0;
+                vertical-align: middle;
+                // Responsive
+                @media #{$xs-layout}{
+                    margin: 0 25px 0 0;
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
+                & a{
+                    font-size: 13px;
+                    line-height: 19px;
+                }
+            }
+        }
+    }
+}

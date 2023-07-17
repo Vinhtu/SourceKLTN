@@ -1,0 +1,124 @@
+/*============================================
+
+                 19 -- blog
+  
+=============================================*/
+
+.blog-area {
+    .blog-wrap {
+        .blog-img {
+            overflow: hidden;
+
+            a {
+                display: block;
+
+                img {
+                    width: 100%;
+                    transform: scale(1);
+                    transition: all .5s ease 0s;
+                }
+            }
+
+            @media #{$xs-layout} {
+                &.mb-25 {
+                    margin-bottom: 15px;
+                }
+
+                &.mb-20 {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+        .blog-content {
+            .blog-meta {
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    li {
+                        margin-right: 30px;
+                        position: relative;
+
+                        &:before {
+                            position: absolute;
+                            content: "";
+                            right: -16px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 1px;
+                            height: 12px;
+                            background-color: #000;
+                        }
+
+                        &:last-child {
+                            margin-right: 0;
+
+                            &:before {
+                                display: none;
+                            }
+                        }
+
+                        a {
+                            color: $black;
+                            font-weight: 600;
+
+                            &:hover {
+                                color: $theme-color-1;
+                            }
+                        }
+                    }
+                }
+            }
+
+            h3,
+            h1 {
+                font-size: 20px;
+                font-weight: 600;
+                margin: 12px 0 0;
+                line-height: 30px;
+                letter-spacing: -.25px;
+
+                @media #{$lg-layout} {
+                    font-size: 17px;
+                    margin: 8px 0 0;
+                }
+
+                @media #{$md-layout} {
+                    font-size: 18px;
+                    margin: 8px 0 0;
+                }
+
+                @media #{$xs-layout} {
+                    font-size: 17px;
+                    margin: 5px 0 0;
+                    line-height: 28px;
+                }
+
+                a {
+                    color: $gray-600;
+
+                    &:hover {
+                        color: $theme-color-1;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            .blog-img {
+                a {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+        @media #{$xs-layout} {
+            &.mb-40 {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

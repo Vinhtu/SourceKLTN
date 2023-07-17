@@ -1,0 +1,84 @@
+/*============================================
+
+                    23 -- faq
+  
+=============================================*/
+.faq-wrap .title {
+  text-align: center;
+
+  h3 {
+    font-size: 36px;
+    color: $gray-600;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+}
+
+.accordion-wrapper .accordion-wrap {
+  margin-bottom: 15px;
+
+  .accordion-header button {
+    font-size: 20px;
+    font-weight: 500;
+    color: $gray-600;
+    background: #fff;
+    width: 100%;
+    border: 0;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    text-align: left;
+    border-radius: 0;
+    position: relative;
+    border-bottom: 1px solid #ececec;
+
+    @media #{$md-layout} {
+      font-size: 20px;
+    }
+
+    @media #{$xs-layout} {
+      font-size: 18px;
+    }
+
+    @media (max-width: 767px) and (min-width: 768px) and (max-width: 991px) {
+      height: 40px;
+      line-height: 40px;
+      width: 40px;
+    }
+
+
+    &:after {
+      content: "\eb53";
+      font-family: "LineIcons";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      text-align: center;
+      background: transparent;
+      height: 50px;
+      line-height: 50px;
+    }
+
+    &[aria-expanded=true] {
+      color: $gray-600;
+      border-color: transparent;
+
+      &:after {
+        content: "\eb2c";
+        background: $theme-color-1;
+        color: #fff;
+      }
+    }
+  }
+
+  .accordion-body {
+    padding: 18px 0;
+
+    p {
+      color: $gray-600;
+      font-size: 16px;
+      line-height: 30px;
+    }
+  }
+}

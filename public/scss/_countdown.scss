@@ -1,0 +1,120 @@
+/*============================================
+
+                09 -- countdown
+  
+=============================================*/
+.countdown-wrapper h3 {
+    font-size: 48px;
+    line-height: 58px;
+    color: #333;
+    margin-bottom: 30px;
+    margin-top: -10px;
+  }
+  
+  @media only screen and (max-width: 575px) {
+    .countdown-wrapper h3 {
+      font-size: 38px;
+      line-height: 48px;
+    }
+  }
+  
+  @media only screen and (max-width: 479px) {
+    .countdown-wrapper h3 {
+      font-size: 28px;
+      line-height: 38px;
+    }
+  }
+  
+  .countdown-wrapper--style2 a.lezada-button:hover {
+    border-color: #ffffff;
+    color: #ffffff !important;
+  }
+  
+  .countdown-wrapper--white-bg a.lezada-button:hover {
+    border-color: #000000;
+    color: #000000 !important;
+  }
+  
+  .deal-countdown {
+    &.text-white * {
+      color: #ffffff !important;
+    }
+  
+    .single-countdown {
+      display: inline-block;
+      margin-bottom: 40px;
+      margin-right: 100px;
+  
+      &:last-child {
+        margin-right: 0;
+  
+        .single-countdown-time:after {
+          display: none;
+        }
+      }
+    }
+  
+    .single-countdown-time {
+      position: relative;
+      display: block;
+      font-size: 56px;
+      line-height: 56px;
+      color: #7e7e7e;
+      font-weight: 300;
+      margin-bottom: 30px;
+  
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 170%;
+        content: ":";
+        font-size: 35px;
+      }
+    }
+  
+    .single-countdown__text {
+      font-size: 14px;
+      line-height: 22px;
+      color: #9b9b9b;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .deal-countdown .single-countdown {
+      margin-right: 50px;
+    }
+  }
+  
+  @media only screen and (max-width: 479px) {
+    .deal-countdown .single-countdown {
+      margin-right: 15px;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .deal-countdown .single-countdown-time {
+      font-size: 48px;
+      line-height: 48px;
+    }
+  }
+  
+  @media only screen and (max-width: 479px) {
+    .deal-countdown .single-countdown-time {
+      font-size: 32px;
+      line-height: 22px;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .deal-countdown .single-countdown-time:after {
+      left: 150%;
+    }
+  }
+  
+  @media only screen and (max-width: 479px) {
+    .deal-countdown .single-countdown-time:after {
+      left: 120%;
+    }
+  }

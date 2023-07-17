@@ -1,0 +1,12 @@
+.Mui-selected {
+  color: '#ff502f !important';
+}
+.slick-dot-img {
+  height: 80 !important;
+  overflow: scroll;
+  bottom: -92 !important;
+}
+.slick-dot-img li {
+  margin-left: 0;
+  margin-right: 8;
+}
